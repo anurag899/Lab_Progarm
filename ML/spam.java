@@ -18,6 +18,7 @@ class spam{
 			float post[]=new float[2];
 			post[0]=nspam/(nspam+nnspam);
 			post[1]=nnspam/(nspam+nnspam);
+			//System.out.println(nspam+" "+nnspam);
 			//System.out.println("Posterior(spam): "+post[0]+" Posterior(nonspam): "+post[1]);
 			String spam[]=s.split("\n");
 			String nonspam[]=ns.split("\n");
@@ -29,10 +30,12 @@ class spam{
 				String t[]=line.split(" ");
 				for(String w:t){nonspamword.add(w);}
 			}
+			//System.out.println(spamword.get(4));
 			//for(String tt:spamword){System.out.println(tt);}
 			ArrayList<String> voc=new ArrayList<String>();
 			for(String t:spamword){voc.add(t);}
 			for(String t:nonspamword){voc.add(t);}
+			System.out.println(voc.get(8));
 			//for(String t:voc){System.out.println(t);}
 			float no_spam=spamword.size();
 			float no_nonspam=nonspamword.size();
