@@ -16,8 +16,8 @@ class Round_Robin{
 	public static void main(String... a){
 		ArrayList<Process> p=new ArrayList<Process>();
 		Gantt g=new Gantt();
-		int tq=	5,i=1;
-		int[] bt={9,5,3,4};
+		int tq=	10,i=1;
+		int[] bt={10,29,3,7,12};
 		for(int b:bt){p.add(new Process("P"+i++,b));}
 		int complete=0,j=0,k=0;
 		g.ft.add(0);

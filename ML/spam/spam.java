@@ -35,7 +35,7 @@ class spam{
 			ArrayList<String> voc=new ArrayList<String>();
 			for(String t:spamword){voc.add(t);}
 			for(String t:nonspamword){voc.add(t);}
-			System.out.println(voc.get(8));
+			//System.out.println(voc.get(8));
 			//for(String t:voc){System.out.println(t);}
 			float no_spam=spamword.size();
 			float no_nonspam=nonspamword.size();
@@ -92,7 +92,9 @@ class spam{
 			else{System.out.println("Feel Safe ! This mail is not spam");}
 			System.out.println("------------------------------------------------------");
 		}
-		catch(Exception e){}
+		catch(Exception e){
+			System.out.println(e);
+		}
 
 	}
 }

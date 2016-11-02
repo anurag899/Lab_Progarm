@@ -15,7 +15,7 @@ class Process implements Comparable<Process>{
 }
 class SJF{
 	public static void main(String a[]){
-		int[] bt={4,8,3,7};
+		int[] bt={10,6,5,6,9};
 		ArrayList<Process> p=new ArrayList<Process>();
 		for(int i=0;i<bt.length;i++){
 			p.add(new Process("P"+(i+1),bt[i]));

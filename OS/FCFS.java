@@ -9,7 +9,7 @@ class Process{
 }
 class FCFS{
 	public static void main(String a[]){
-		int[] bt={24,3,3};
+		int[] bt={10,4,11,6};
 		Process[] p=new Process[3];
 		for(int i=0;i<3;i++){
 			p[i]=new Process("P"+(i+1),bt[i]);

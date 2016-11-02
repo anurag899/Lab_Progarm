@@ -16,8 +16,8 @@ class Process implements Comparable<Process>{
 }
 class Priorty{
 	public static void main(String a[]){
-		int[] bt={6,2,14,6};
-		int[] pt={3,2,1,4};
+		int[] bt={10,7,6,13,5};
+		int[] pt={3,1,3,4,2};
 		ArrayList<Process> p=new ArrayList<Process>();
 		for(int i=0;i<bt.length;i++){
 			p.add(new Process("P"+(i+1),bt[i],pt[i]));
