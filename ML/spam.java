@@ -86,7 +86,7 @@ class spam{
 					else{p_nonspam*=p[k][j];}
 				}
 			}
-			System.out.println("P(Spam) "+p_spam+" "+"P(NonSpam) "+p_nonspam);
+			System.out.println(p_spam+" "+p_nonspam);
 			System.out.println("------------------------------------------------------");
 			if(p_spam>p_nonspam){System.out.println("Beware ! This mail is spam");}
 			else{System.out.println("Feel Safe ! This mail is not spam");}
