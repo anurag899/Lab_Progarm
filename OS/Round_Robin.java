@@ -19,7 +19,7 @@ class Round_Robin{
 		int tq=	10,i=1;
 		int[] bt={10,29,3,7,12};
 		for(int b:bt){p.add(new Process("P"+i++,b));}
-		int complete=0,j=0,k=0;
+		int complete=0,j=0;
 		g.ft.add(0);
 		while(complete!=bt.length){
 			if(tq<p.get(j).temp){
