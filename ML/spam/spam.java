@@ -47,7 +47,7 @@ class spam{
 			// System.out.printf("\b)\n");
 			// System.out.printf("Enter Your Mail:\n");
 			// Scanner sc=new Scanner(System.in);
-			 String t="I love movie";//sc.nextLine();
+			 String t="I hated poor acting";//sc.nextLine();
 			String text[]=t.split(" ");
 			//for(String tt:text){System.out.println(tt);}
 			float occ_spam,occ_nonspam;
@@ -82,7 +82,7 @@ class spam{
 				}
 				System.out.printf("\n");
 			}
-			float p_spam=1,p_nonspam=1;
+			double p_spam=1,p_nonspam=1;
 			for(int k=0;k<text.length;k++){
 				p_spam*=p[k][0];
 				p_nonspam*=p[k][1];

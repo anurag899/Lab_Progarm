@@ -20,47 +20,47 @@ float w[3];
 
 main()
 {
- int i,j;
- float error=1;
- w_initialisation();
-for(i=0;i<no_of_sample && error>desired_error;i++)
-{
-  printf("\nH for training sample:%d=%f",i+1,cal_h(i));
-  error=0.5*pow((h[i]-y[i]),2);
-  printf("\ncost=%f",error);
-  printf("\n\n");
-  for(j=0;j<3;j++)
-  {
-   if(j==0)
-    w[0]=w[0]+alpha*(y[i]-h[i])*1;
-   else
-      w[j]=w[j]+alpha*(y[i]-h[i])*x[i][j-1];
-  }
-h[i]=cal_h(i);
-error=0.5*pow((h[i]-y[i]),2);
-}
-testing();
+     int i,j;
+     float error=1;
+     w_initialisation();
+    for(i=0;i<no_of_sample && error>desired_error;i++)
+    {
+      printf("\nH for training sample:%d=%f",i+1,cal_h(i));
+      error=0.5*pow((h[i]-y[i]),2);
+      printf("\ncost=%f",error);
+      printf("\n\n");
+      for(j=0;j<3;j++)
+      {
+       if(j==0)
+        w[0]=w[0]+alpha*(y[i]-h[i])*1;
+       else
+          w[j]=w[j]+alpha*(y[i]-h[i])*x[i][j-1];
+      }
+    h[i]=cal_h(i);
+    error=0.5*pow((h[i]-y[i]),2);
+    }
+    testing();
 }
 
 
 void testing()
 {
-int i,j;
-float test_y=0.0;
-for(i=0;i<2;i++)
-{ 
- test_y=0.0;
- for(j=0;j<3;j++)
-  { 
-    if(j==0)
-     {
-      test_y=w[0];
-     }
-    else
-        test_y=test_y +w[j]*test[i][j-1];
-  }
- printf("\ntest_y=%f",test_y);
-}
+    int i,j;
+    float test_y=0.0;
+    for(i=0;i<2;i++)
+    { 
+     test_y=0.0;
+     for(j=0;j<3;j++)
+      { 
+        if(j==0)
+         {
+          test_y=w[0];
+         }
+        else
+            test_y=test_y +w[j]*test[i][j-1];
+      }
+     printf("\ntest_y=%f",test_y);
+    }
 }
 
 float cal_h(int i)

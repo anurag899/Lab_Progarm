@@ -12,7 +12,7 @@ int main()
     for(int i = 0;i<256;i++)
     {
         color[i] = rand() % 256;
-        //cout<<color[i]<<"\t";
+                     //cout<<color[i]<<"\t";
     }
     //cout<<color[3];
     int centroid[16];
