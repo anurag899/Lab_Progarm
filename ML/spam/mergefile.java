@@ -8,14 +8,17 @@ class mergefile{
 		try{
 			for(int i=1;i<=num_File;i++){
 				FileInputStream in=new FileInputStream(a[0]+i+".txt");
-				in.read(b);
-				spam.add(new String(b));
+				byte[] c=new byte[100];
+				in.read(c);
+				spam.add(new String(c));
 				in.close();
 			}
 			String add="";
 			for(String m:spam){
 				String t=m.trim();
-				add+=t+"\n";
+				System.out.println(t);
+				add += t+"\n";
+				//System.out.println(add);
 			}
 			FileOutputStream fspam=new FileOutputStream(a[0]+".txt");
 			b=add.getBytes();
